@@ -19,6 +19,8 @@ body {
   src: url("../fonts/MetalMania-Regular.ttf");
 }
 
+
+/*Intro Page*/
 .rm-Title {
   color: #fff0f0;
   font-size: 81px;
@@ -53,11 +55,17 @@ body {
   border-radius: 20px;
   border: none;
   font-size: 49px;
+
+  outline: none;
+  cursor: pointer;
 }
 
+
+/*Media Queries*/
 @media screen and (max-width: 457px) {
   .rm-Title {
     font-size: 49px;
+    padding-bottom: 7px;
   }
   .rm-Subtitle {
     font-size: 28px;
@@ -70,6 +78,8 @@ body {
   }
 }
 
+
+/*Levels Page*/
 .rm-LevelsList {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -85,4 +95,38 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 950px) {
+  .rm-LevelsList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rm-Content {
+    padding: 35px 0;
+  }
+
+  body {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .rm-LevelsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 457px) {
+  .rm-LevelsList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .rm-LevelCard {
+    width: 130px;
+    height: 130px;
+    font-size: 55px;
+  }
 }
